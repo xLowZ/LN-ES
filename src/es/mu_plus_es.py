@@ -139,10 +139,10 @@ def crossover(first_parent: Individual, second_parent: Individual) -> tuple[Indi
 
         alpha = np.random.uniform(0, 1)
 
-        first_child_genes    = alpha * first_parent.genes + (1 - alpha) * second_parent.genes
+        first_child_genes    = alpha * first_parent.genes    + (1 - alpha) * second_parent.genes
         first_child_strategy = alpha * first_parent.strategy + (1 - alpha) * second_parent.strategy
 
-        second_child_genes    = (1 - alpha) * first_parent.genes + alpha * second_parent.genes
+        second_child_genes    = (1 - alpha) * first_parent.genes    + alpha * second_parent.genes
         second_child_strategy = (1 - alpha) * first_parent.strategy + alpha * second_parent.strategy
 
 
@@ -167,7 +167,7 @@ def create_new_generation(previous_generation: list[Individual]) -> list[Individ
     Criação da nova geração utilizando `(μ + λ)-ES`.
 
     Args:
-        previous_generation (list[Individual]): Pupulação atual
+        previous_generation (list[Individual]): População atual
 
     Returns:
         list[Individual]: Nova geração com μ indivíduos
@@ -202,7 +202,7 @@ def create_new_generation_one_mu(previous_generation: list[Individual]) -> list[
     Criação da nova geração `(1 + λ)-ES`.
     
     Args:
-        previous_generation (list[Individual]): Pupulação atual
+        previous_generation (list[Individual]): População atual
 
     Returns:
         list[Individual]: Nova geração com 1 indivíduo.

@@ -72,7 +72,7 @@ def create_new_generationZ(previous_generation: list[Individual | IndividualZ]) 
     Criação da nova geração utilizando `(μ + λ)-ES`.
 
     Args:
-        previous_generation (list[IndividualZ]): Pupulação atual
+        previous_generation (list[IndividualZ]): População atual
 
     Returns:
         list[IndividualZ]: Nova geração com μ indivíduos
@@ -107,7 +107,7 @@ def create_new_generation_oneZ(previous_generation: list[IndividualZ]) -> list[I
     Criação da nova geração `(1 + λ)-ES`.
     
     Args:
-        previous_generation (list[IndividualZ]): Pupulação atual
+        previous_generation (list[IndividualZ]): População atual
 
     Returns:
         list[IndividualZ]: Nova geração com 1 indivíduo.
